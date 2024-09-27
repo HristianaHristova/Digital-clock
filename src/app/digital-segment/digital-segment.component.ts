@@ -12,6 +12,7 @@ export class DigitalSegmentComponent {
   @Input() segmentName: string = '';
   @Input() segmentElement: string = '';
 
+  // Segment map for every active number
   segmentMap: { [key: number]: string[] } = {
     0: ['a', 'b', 'c', 'd', 'e', 'f'],
     1: ['b', 'c'],
@@ -29,6 +30,7 @@ export class DigitalSegmentComponent {
     return this.segmentMap[digit].includes(segment);
   }
 
+  // Seconds are considered to be two-digits numbers
   getDigit(number: string, digitIndex: number): number {
     if (this.segmentName == "SECONDS" || this.isWithLeadingZeroes()) {
       const strNum = number.padStart(2, '0');

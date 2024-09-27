@@ -65,6 +65,7 @@ export class DigitalClockComponent implements OnInit {
     }
   }
 
+
   formatMinutes() {
     const regex = /(\S+)\s+(\S+)/;
     const minutes = this.format.match(regex)?.at(2);

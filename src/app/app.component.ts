@@ -10,9 +10,10 @@ import {DigitalClockComponent} from "./digital-clock/digital-clock.component";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  format = 'HH mm tt';
   // hours --> HH/H/hh/h
   // minutes --> mm/m
   // AM/PM --> tt/
   // Example --> hh m/HH mm tt
+  format = 'HH mm tt';
+
 }
