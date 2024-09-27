@@ -1,0 +1,20 @@
+<div class="digital-clock" *ngIf="visible">
+  <app-digital-segment segmentName="HOURS" [segmentElement]="hours"></app-digital-segment>
+  <div class="dots-container">
+    <div class="dot" [ngStyle]="{ 'background-color': dotColor()}"></div>
+    <div class="dot" [ngStyle]="{ 'background-color': dotColor()}"></div>
+  </div>
+  <app-digital-segment segmentName="MINUTES" [segmentElement]="minutes"></app-digital-segment>
+  <div class="dots-container">
+    <div class="dot" [ngStyle]="{ 'background-color': dotColor()}"></div>
+    <div class="dot" [ngStyle]="{ 'background-color': dotColor()}"></div>
+  </div>
+  <app-digital-segment segmentName="SECONDS" [segmentElement]="seconds"></app-digital-segment>
+  <div *ngIf="ampmVisible" class="dots-container">
+    <div style="display: flex; align-items: center">
+      <div class="dot" [ngStyle]="{ 'background-color': dotColor()}"></div>
+      <div>{{ ampm.toUpperCase() }}</div>
+    </div>
+  </div>
+</div>
+

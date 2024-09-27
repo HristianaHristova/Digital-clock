@@ -1,0 +1,26 @@
+<div style="display: flex; flex-direction: column; align-items: center">
+  <div style="color: white">
+    {{ segmentName }}
+  </div>
+  <div class="segment-element">
+    <div class="digit" *ngIf="isWithLeadingZeroes() || segmentName == 'SECONDS'">
+      <div class="segment a" [ngClass]="{'on': isSegmentOn(getDigit(segmentElement, 0), 'a')}"></div>
+      <div class="segment b" [ngClass]="{'on': isSegmentOn(getDigit(segmentElement, 0), 'b')}"></div>
+      <div class="segment c" [ngClass]="{'on': isSegmentOn(getDigit(segmentElement, 0), 'c')}"></div>
+      <div class="segment d" [ngClass]="{'on': isSegmentOn(getDigit(segmentElement, 0), 'd')}"></div>
+      <div class="segment e" [ngClass]="{'on': isSegmentOn(getDigit(segmentElement, 0), 'e')}"></div>
+      <div class="segment f" [ngClass]="{'on': isSegmentOn(getDigit(segmentElement, 0), 'f')}"></div>
+      <div class="segment g" [ngClass]="{'on': isSegmentOn(getDigit(segmentElement, 0), 'g')}"></div>
+    </div>
+    <div class="digit">
+      <div class="segment a" [ngClass]="{'on': isSegmentOn(getDigit(segmentElement, 1), 'a')}"></div>
+      <div class="segment b" [ngClass]="{'on': isSegmentOn(getDigit(segmentElement, 1), 'b')}"></div>
+      <div class="segment c" [ngClass]="{'on': isSegmentOn(getDigit(segmentElement, 1), 'c')}"></div>
+      <div class="segment d" [ngClass]="{'on': isSegmentOn(getDigit(segmentElement, 1), 'd')}"></div>
+      <div class="segment e" [ngClass]="{'on': isSegmentOn(getDigit(segmentElement, 1), 'e')}"></div>
+      <div class="segment f" [ngClass]="{'on': isSegmentOn(getDigit(segmentElement, 1), 'f')}"></div>
+      <div class="segment g" [ngClass]="{'on': isSegmentOn(getDigit(segmentElement, 1), 'g')}"></div>
+    </div>
+  </div>
+
+</div>
